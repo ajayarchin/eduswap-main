@@ -77,16 +77,21 @@ const ProfileSetup = () => {
         </label>
         <label>
           Branch:
-          <input
-            type="text"
-            value={branch}
-            onChange={(e) => setBranch(e.target.value)}
-            required
-          />
+          <select value={branch} onChange={(e) => setBranch(e.target.value)} required>
+            <option value="">Select Branch</option>
+            <option value="AI&DS">AI&DS</option>
+            <option value="AI&ML">AI&ML</option>
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+            <option value="MECH">MECH</option>
+            <option value="CIVIL">CIVIL</option>
+            <option value="EEE">EEE</option>
+            <option value="CSBS">CSBS</option>
+          </select>
         </label>
         <label>
           Year:
-<<<<<<< HEAD
           <select value={year} onChange={(e) => setYear(e.target.value)} required>
             <option value="">Select Year</option>
             <option value="1st Year">1st Year</option>
@@ -94,14 +99,6 @@ const ProfileSetup = () => {
             <option value="3rd Year">3rd Year</option>
             <option value="4th Year">4th Year</option>
           </select>
-=======
-          <input
-            type="text"
-            value={year}
-            onChange={(e) => setYear(e.target.value)}
-            required
-          />
->>>>>>> ded9a575e9fadc500d768703bc547ae41d124cfd
         </label>
         <label>
           Skills:

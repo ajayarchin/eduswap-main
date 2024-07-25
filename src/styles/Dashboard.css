@@ -4,13 +4,13 @@
   flex-direction: column;
   height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: #141414; /* Dark background similar to Netflix */
-  color: #e5e5e5; /* Light gray text for better readability on dark background */
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text for better readability on white background */
 }
 
 .navbar {
-  background-color: #000; /* Black navbar */
-  color: #e5e5e5; /* Light gray text */
+  background-color: #1e3a8a; /* Blue navbar */
+  color: #ffffff; /* White text */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,11 +21,11 @@
   top: 0;
   left: 0;
   z-index: 1000; /* Ensure it stays above other content */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow for depth */
 }
 
 .navbar-brand a {
-  color: #e50914; /* Netflix red color */
+  color: #3b82f6; /* Lighter blue color */
   text-decoration: none;
   font-size: 1.75rem;
   font-weight: bold;
@@ -42,7 +42,7 @@
 }
 
 .navbar-nav a {
-  color: #e5e5e5; /* Light gray text */
+  color: #ffffff; /* White text */
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -50,8 +50,8 @@
 }
 
 .navbar-nav a:hover {
-  background-color: #e50914; /* Netflix red for hover effect */
-  color: #fff; /* White text on hover */
+  background-color: #3b82f6; /* Lighter blue for hover effect */
+  color: #ffffff; /* White text on hover */
 }
 
 .navbar-notifications {
@@ -61,23 +61,23 @@
 
 .navbar-notifications .faBell {
   font-size: 1.5rem;
-  color: #e5e5e5; /* Light gray icon */
+  color: #ffffff; /* White icon */
   transition: color 0.3s ease;
 }
 
 .navbar-notifications .faBell:hover {
-  color: #e50914; /* Netflix red on hover */
+  color: #3b82f6; /* Lighter blue on hover */
 }
 
 .notifications-dropdown {
   position: absolute;
   top: 30px;
   right: 0;
-  background-color: #222; /* Dark background for dropdown */
-  color: #e5e5e5; /* Light gray text */
-  border: 1px solid #333;
+  background-color: #f0f4ff; /* Light blue background for dropdown */
+  color: #000000; /* Black text */
+  border: 1px solid #d1e0ff; /* Lighter border */
   border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow for depth */
   z-index: 1001; /* Ensure it stays above other content */
 }
 
@@ -89,7 +89,7 @@
 
 .notifications-dropdown li {
   padding: 5px;
-  border-bottom: 1px solid #444; /* Darker gray border */
+  border-bottom: 1px solid #d1e0ff; /* Lighter gray border */
 }
 
 .notifications-dropdown li:last-child {
@@ -97,15 +97,15 @@
 }
 
 .notifications-dropdown li:hover {
-  background-color: #333; /* Dark gray hover effect */
+  background-color: #d1e0ff; /* Light gray hover effect */
 }
 
 .dashboard-header {
-  background: #000; /* Black header background */
-  color: #e50914; /* Netflix red text */
+  background: #ffffff; /* Blue header background */
+  color: #363434; /* White text */
   padding: 1.5rem 2rem;
   text-align: center;
-  border-bottom: 3px solid #333; /* Dark border for separation */
+  border-bottom: 3px solid #3b82f6; /* Lighter border for separation */
   margin-top: 4rem; /* Added margin to account for fixed navbar */
 }
 
@@ -120,9 +120,9 @@
 
 .dashboard-overview,
 .dashboard-notifications {
-  background: #222; /* Dark gray background for sections */
+  background: #f0f4ff; /* Light blue background for sections */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   width: 300px;
   margin: 0 1rem;
@@ -131,7 +131,7 @@
 .dashboard-overview h2,
 .dashboard-notifications h2 {
   margin-bottom: 1rem;
-  color: #e50914; /* Netflix red for headings */
+  color: #1e3a8a; /* Blue for headings */
 }
 
 .dashboard-overview ul,
@@ -143,7 +143,7 @@
 .dashboard-overview li,
 .dashboard-notifications li {
   padding: 0.5rem;
-  border-bottom: 1px solid #444; /* Darker gray border */
+  border-bottom: 1px solid #d1e0ff; /* Lighter gray border */
 }
 
 .dashboard-overview li:last-child,
@@ -153,7 +153,7 @@
 
 .dashboard-overview li:hover,
 .dashboard-notifications li:hover {
-  background-color: #333; /* Dark gray hover effect */
+  background-color: #d1e0ff; /* Light gray hover effect */
 }
 
 .image-slider {

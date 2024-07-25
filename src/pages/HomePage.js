@@ -4,6 +4,8 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import '../styles/HomePage.css'; // Ensure the path is correct
+import logo from '../images/eduswaplogo1.png'; // Correct path to the logo image
+
 
 // Firebase configuration
 const firebaseConfig = {
@@ -16,6 +18,7 @@ const firebaseConfig = {
   appId: "1:745544145688:web:31c5c229da14fefad31c6d",
   measurementId: "G-E5WRBEYCXQ"
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -75,6 +78,7 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
+      <img src={logo} alt="EduSwap Logo" className="home-logo" />
       <h1>Welcome to the Skill Swapping Platform</h1>
       <p>Connect with your peers to exchange skills and knowledge!</p>
       <div className="home-buttons">

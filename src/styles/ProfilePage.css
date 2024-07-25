@@ -1,7 +1,8 @@
+/* General page styling */
 .profile-page {
   font-family: 'Arial', sans-serif;
-  color: #e5e5e5;
-  background-color: #141414; /* Dark background similar to Netflix */
+  color: #333; /* Dark text color */
+  background-color: #f0f4f8; /* Light background */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,10 +12,10 @@
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Navbar styling (consistent with Dashboard) */
+/* Navbar styling */
 .navbar {
-  background-color: #000; /* Black navbar */
-  color: #e5e5e5; /* Light gray text */
+  background-color: #1e3a8a; /* Blue navbar */
+  color: #fff; /* White text */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +29,7 @@
 }
 
 .navbar-brand a {
-  color: #e50914; /* Netflix red color */
+  color: #fff; /* White text */
   text-decoration: none;
   font-size: 1.75rem;
   font-weight: bold;
@@ -40,7 +41,7 @@
 }
 
 .navbar-link {
-  color: #e5e5e5; /* Light gray text */
+  color: #fff; /* White text */
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -48,7 +49,7 @@
 }
 
 .navbar-link:hover {
-  background-color: #e50914; /* Netflix red for hover effect */
+  background-color: #1a2a6c; /* Darker blue for hover effect */
   color: #fff; /* White text on hover */
 }
 
@@ -65,7 +66,7 @@
   flex-direction: column; /* Center items vertically */
   align-items: center;
   margin-bottom: 2rem;
-  color: #e5e5e5;
+  color: #333; /* Dark text color */
 }
 
 .profile-image-container {
@@ -76,12 +77,12 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 4px solid #e50914; /* Red border */
+  border: 4px solid #1e3a8a; /* Blue border */
 }
 
 .profile-header h1 {
   font-size: 2rem;
-  color: #e5e5e5; /* Light gray text */
+  color: #333; /* Dark text color */
   margin-bottom: 0.5rem;
 }
 
@@ -100,9 +101,9 @@
 }
 
 .profile-section {
-  background: #222; /* Dark gray background for cards */
+  background: #fff; /* White background for cards */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow for depth */
   padding: 1.5rem;
   width: calc(50% - 1rem);
   margin-bottom: 2rem;
@@ -111,8 +112,8 @@
 
 .profile-section h3 {
   font-size: 1.5rem;
-  color: #e50914; /* Netflix red for headings */
-  border-bottom: 2px solid #e50914;
+  color: #1e3a8a; /* Blue for headings */
+  border-bottom: 2px solid #1e3a8a;
   padding-bottom: 10px;
   margin-bottom: 1rem;
 }
@@ -124,16 +125,16 @@
 
 .profile-section li {
   font-size: 1rem;
-  color: #ddd; /* Light gray text */
+  color: #333; /* Dark text color */
   margin-bottom: 0.5rem;
 }
 
 .profile-section li strong {
-  color: #e50914; /* Red text for strong emphasis */
+  color: #1e3a8a; /* Blue text for strong emphasis */
 }
 
 .profile-section li em {
-  color: #999; /* Gray text for company/emphasis */
+  color: #999; /* Gray text for emphasis */
 }
 
 .profile-section li:not(:last-child) {
@@ -142,10 +143,10 @@
 
 .profile-section p {
   font-size: 1rem;
-  color: #ddd; /* Light gray text */
+  color: #333; /* Dark text color */
   margin-bottom: 0.5rem;
 }
-.profile-main{
-  margin-left: 380px;
 
+.profile-main {
+  margin-left: 380px; /* Adjusted for layout */
 }
