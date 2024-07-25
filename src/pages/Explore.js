@@ -82,12 +82,17 @@ const Explore = () => {
   };
 
   if (loading) {
+<<<<<<< HEAD
     return (
       <div className="spinner">
         <div className="dot1"></div>
         <div className="dot2"></div>
       </div>
     );  }
+=======
+    return <div>Loading...</div>;
+  }
+>>>>>>> ded9a575e9fadc500d768703bc547ae41d124cfd
 
   if (error) {
     return <div>Error: {error}</div>;

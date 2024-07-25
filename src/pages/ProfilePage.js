@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import '../styles/ProfilePage.css';
-import logo from '../images/logo.jpg'; // Update the path to your logo
+import logo from '../images/logo.jpg'; 
 
 const ProfilePage = () => {
   const [profile, setProfile] = useState({
@@ -55,12 +55,16 @@ const ProfilePage = () => {
   }, []);
 
   if (loading) {
+<<<<<<< HEAD
     return (
       <div className="spinner">
         <div className="dot1"></div>
         <div className="dot2"></div>
       </div>
     );
+=======
+    return <div>Loading...</div>;
+>>>>>>> ded9a575e9fadc500d768703bc547ae41d124cfd
   }
 
   if (error) {

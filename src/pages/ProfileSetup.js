@@ -86,6 +86,7 @@ const ProfileSetup = () => {
         </label>
         <label>
           Year:
+<<<<<<< HEAD
           <select value={year} onChange={(e) => setYear(e.target.value)} required>
             <option value="">Select Year</option>
             <option value="1st Year">1st Year</option>
@@ -93,6 +94,14 @@ const ProfileSetup = () => {
             <option value="3rd Year">3rd Year</option>
             <option value="4th Year">4th Year</option>
           </select>
+=======
+          <input
+            type="text"
+            value={year}
+            onChange={(e) => setYear(e.target.value)}
+            required
+          />
+>>>>>>> ded9a575e9fadc500d768703bc547ae41d124cfd
         </label>
         <label>
           Skills:

@@ -1,77 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { getFirestore, doc, getDoc } from 'firebase/firestore';
-import '../styles/Dashboard.css'; // Ensure you have this CSS file
-import '../styles/LoadingSpinner.css'; // Import the loading spinner CSS
+import '../styles/ProfilePage.css';
+import logo from '../images/logo.jpg'; // Update the path to your logo
 
-const images = [
-  '/images/EduSwap.png', // Replace with your image URLs
-  '/images/image1.png',
-  '/images/image.png',
-];
-
-function Dashboard() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [user, setUser] = useState({ displayName: '', skills: [], notifications: [] });
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    console.log(`Current index: ${currentIndex}`);
-    console.log(`Current image: ${images[currentIndex]}`);
-  }, [currentIndex]);
-
-  useEffect(() => {
-    const auth = getAuth();
-    const db = getFirestore();
-
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      if (currentUser) {
-        try {
-          const userDocRef = doc(db, 'users', currentUser.uid);
-          const userDoc = await getDoc(userDocRef);
-          const userData = userDoc.exists() ? userDoc.data() : { skills: [], notifications: [] };
-
-          setUser({
-            displayName: currentUser.displayName || 'User',
-            skills: userData.skills || [],
-            notifications: userData.notifications || []
-          });
-        } catch (err) {
-          console.error('Error fetching user data:', err);
-          setError('Failed to fetch user data.');
-        }
-      } else {
-        setUser(null);
-        setError('No user is signed in.');
-      }
-      setLoading(false);
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="spinner">
-        <div className="dot1"></div>
-        <div className="dot2"></div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+const ProfilePage = () => {
+  // Dummy profile data
+  const profile = {
+    name: 'Irfan',
+    title: 'Btech 3rd Year',
+    skills: ['JavaScript', 'React', 'Node.js'],
+    experience: [
+      { role: 'Frontend Developer', company: 'Company A', duration: 'Jan 2020 - Dec 2022' },
+      { role: 'Backend Developer', company: 'Company B', duration: 'Jan 2018 - Dec 2019' }
+    ],
+    certifications: ['Certified React Developer', 'AWS Certified Solutions Architect'],
+    projects: [
+      { title: 'Project A', description: 'A project description' },
+      { title: 'Project B', description: 'Another project description' }
+    ]
+  };
 
   return (
     <div className="dashboard">
