@@ -168,7 +168,7 @@ function Dashboard() {
           <Link to="/dashboard">EduSwap</Link>
         </div>
         <ul className="navbar-nav">
-          <li><Link to="/dashboard">Dashboard</Link></li>
+          <li><Link to="/dashboard"><b>Dashboard</b></Link></li>
           <li><Link to="/explore">Explore</Link></li>
           <li><Link to="/profile">Profile</Link></li>
           <li><Link to="/chat">chat</Link></li>
