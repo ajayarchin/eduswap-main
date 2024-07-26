@@ -12,6 +12,8 @@ import ProfilePage from './pages/ProfilePage';
 import ProfileSetup from './pages/ProfileSetup';
 import ViewProfilePage from './pages/ViewProfilePage'; // Correct import name
 import Requests from './pages/Requests';
+import Chat from './pages/chat';
+
 
 
 function App() {
@@ -30,7 +32,9 @@ function App() {
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/profilesetup" element={<ProfileSetup />} />
             <Route path="/requests" element={<Requests />} />
-            <Route path="/viewprofile/:id" element={<ViewProfilePage />} /> {/* Ensure correct path and component name */}
+            <Route path="/viewprofile/:id" element={<ViewProfilePage />} />
+            <Route path="/chat" element={<Chat />} />
+ {/* Ensure correct path and component name */}
           </Routes>
         </main>
       </div>
