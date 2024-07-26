@@ -26,7 +26,6 @@ const Explore = () => {
               .map(doc => ({ id: doc.id, ...doc.data() }))
               .filter(user => user.id !== currentUser.uid);
 
-            // Assign random ratings
             usersList.forEach(user => {
               user.rating = (Math.random() * (5 - 4) + 4).toFixed(1);
               user.image = defaultProfileImage;
@@ -48,23 +47,6 @@ const Explore = () => {
     };
 
     fetchProfiles();
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const navbar = document.querySelector('.navbar');
-      let lastScrollTop = 0;
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (scrollTop > lastScrollTop) {
-        navbar.classList.add('hidden');
-      } else {
-        navbar.classList.remove('hidden');
-      }
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleSearch = (event) => {
@@ -119,7 +101,7 @@ const Explore = () => {
       <main className="explore-main freelancers-container">
         {filteredProfiles.map((profile, index) => (
           <div key={index} className="freelancer-box">
-            <img src={profile.image} alt={`${profile.name}`} className="profile-image" onClick={() => alert(`Showing detailed profile for ${profile.name}`)} />
+            <img src={profile.image} alt={`${profile.name}`} className="profile-image" />
             <h3>{profile.name}</h3>
             <p>{profile.role}</p>
             <div className="rating">{'⭐'.repeat(Math.floor(profile.rating))} ({profile.rating})</div>
@@ -130,7 +112,7 @@ const Explore = () => {
             </div>
             <p><i className="fas fa-briefcase"></i> {profile.projects ? profile.projects.length : 0} completed projects</p>
             <div className="buttons">
-              <button className="button view-profile" onClick={() => alert(`Showing detailed profile for ${profile.name}`)}>View Profile</button>
+              <Link to={`/viewprofile/${profile.id}`} className="button view-profile">View Profile</Link>
               <button className="button hire-now">Request</button>
             </div>
           </div>

@@ -77,3 +77,15 @@
   background-color: #a6c8ff; /* Light blue when disabled */
   cursor: not-allowed;
 }
+
+.google-signin-button {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.google-signin-button img {
+  width: 200px; /* Adjust size as needed */
+  height: auto;
+}
+

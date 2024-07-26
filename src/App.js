@@ -9,7 +9,10 @@ import SettingsPage from './pages/SettingsPage';
 import LogoutPage from './pages/LogoutPage';
 import Explore from './pages/Explore';
 import ProfilePage from './pages/ProfilePage';
-import ProfileSetup from './pages/ProfileSetup'; // Import ProfileSetup
+import ProfileSetup from './pages/ProfileSetup';
+import ViewProfilePage from './pages/ViewProfilePage'; // Correct import name
+import Requests from './pages/Requests';
+
 
 function App() {
   return (
@@ -24,8 +27,10 @@ function App() {
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="/logout" element={<LogoutPage />} />
             <Route path="/explore" element={<Explore />} />
-            <Route path="/profile" element={<ProfilePage/>} />
+            <Route path="/profile" element={<ProfilePage />} />
             <Route path="/profilesetup" element={<ProfileSetup />} />
+            <Route path="/requests" element={<Requests />} />
+            <Route path="/viewprofile/:id" element={<ViewProfilePage />} /> {/* Ensure correct path and component name */}
           </Routes>
         </main>
       </div>

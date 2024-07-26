@@ -5,9 +5,9 @@ import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import '../styles/Dashboard.css'; // Ensure you have this CSS file
 
 const images = [
-  '/images/EduSwap.png', // Replace with your image URLs
-  '/images/image1.png',
-  '/images/image.png',
+  '/images/image1.png', // Replace with your image URLs
+  '/images/image2.png',
+  '/images/image3.png',
 ];
 
 function Dashboard() {
@@ -83,35 +83,48 @@ function Dashboard() {
       </nav>
       <header className="dashboard-header">
         <h1>Welcome, {user.displayName}!</h1>
-        <div className="image-slider">
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Slide ${index + 1}`}
-              className={index === currentIndex ? 'visible' : 'hidden'}
-            />
-          ))}
-        </div>
       </header>
       <main className="dashboard-main">
-        <section className="dashboard-overview">
-          <h2>Your Skills</h2>
-          <ul>
-            {user.skills.map((skill, index) => (
-              <li key={index}>{skill}</li>
-            ))}
-          </ul>
-        </section>
-        <section className="dashboard-notifications">
-          <h2>Notifications</h2>
-          <ul>
-            {user.notifications.map((notification, index) => (
-              <li key={index}>{notification}</li>
-            ))}
-          </ul>
-        </section>
+        <div className="dashboard-sections">
+          <section className="dashboard-skills">
+            <h2>Your Skills</h2>
+            <ul>
+              {user.skills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </section>
+          <section className="dashboard-image-slider">
+            <div className="image-slider">
+              {images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Slide ${index + 1}`}
+                  className={index === currentIndex ? 'visible' : 'hidden'}
+                />
+              ))}
+            </div>
+          </section>
+          <section className="dashboard-notifications">
+            <h2>Notifications</h2>
+            <ul>
+              {user.notifications.map((notification, index) => (
+                <li key={index}>{notification}</li>
+              ))}
+            </ul>
+          </section>
+        </div>
       </main>
+      <footer className="dashboard-footer">
+        <p>&copy; 2024 EduSwap. All rights reserved.</p>
+        <p><Link to="/terms">Terms of Service</Link> | <Link to="/privacy">Privacy Policy</Link></p>
+        <div className="about-us">
+          <h2>About Us</h2>
+          <p>EduSwap is an innovative platform designed to help learners exchange skills and knowledge. Our mission is to create a collaborative and engaging environment where users can learn from each other and grow together.</p>
+          <p>For more information,By Team <b>AIMS</b></p>
+        </div>
+      </footer>
     </div>
   );
 }
